@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 – Introductie Webdesign</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+
+<main class="week-container">
+  <a href="../index.html" class="back-btn">← Terug</a>
+
+  <!-- Week label -->
+  <div class="week-header">
+      <span class="week-badge">Week 9</span>
+  </div>
+
+    <h1>Gsm-schermen</h1>
+
+    <p class="intro">Figma</p>
+
+    <section class="card">
+        <h2>Documentatie</h2>
+        <p>In les 9 moesten we natuurlijk verder werken aan onze gsm-schermen. Ze gaven nog wat tips en feedback over de shermen zodat we zeker wisten wat we moesten doen en hoe ze er it moesten zien. De feedback was bijvoorbeeld dat je goed moest zien of je formaat van je schermen wel goed was als je die op preview zou zetten.
+            Want bij sommige was die te groot waardoor je niets kon zien van de schermen. Dit was bij mij ook het geval waardoor ik al mijn schermen moest verkleinen en aanpassen. Ik ben heel erg blij dat ze dit hebben gezegd anders was alles fout bij mij. 
+            Voor de rest was de feedback heel erg goed bij mij en gaf de lector nog wat tips om mijn schermen echt helemaal goed te maken. Zo zei mijn lector dat ik op Figma bijvoorbeeld een toetsenbord kon kopieren om het helemaal echt te laten lijken. Dat heb ik dan ook gebruikt en inderdaad het ziet er zo veel beter uit. 
+
+        </p>
+    </section>
+
+</main>
+
+<!-- MODAL (MOET BINNEN BODY) -->
+<div id="img-modal">
+    <span id="close">&times;</span>
+    <img id="modal-img">
+</div>
+
+<!-- SCRIPT (MOET ONDERAAN) -->
+<script>
+  const images = document.querySelectorAll(".clickable-img");
+  const modal = document.getElementById("img-modal");
+  const modalImg = document.getElementById("modal-img");
+  const close = document.getElementById("close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  close.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  modal.onclick = () => {
+    modal.style.display = "none";
+  };
+</script>
+<footer class="site-footer">
+  <p>Aagje Cornelissens — 1GDM2</p>
+</footer>
+</body>
+</html>

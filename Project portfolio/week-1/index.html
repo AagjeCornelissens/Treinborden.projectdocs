@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 – Introductie Webdesign</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+
+<main class="week-container">
+  <a href="../index.html" class="back-btn">← Terug</a>
+
+  <!-- Week label -->
+  <div class="week-header">
+      <span class="week-badge">Week 1</span>
+  </div>
+
+    <h1>Schetsen</h1>
+
+    <p class="intro">Low-fi</p>
+
+    <section class="card">
+        <h2>Documentatie</h2>
+        <p>In week 1 moesten we onze eerste ideeën van een treinbord op papier schetsen. Dit moest in low-fi schetsen. Ik wist eerst niet wat ze hiermee bedoelde dus ik schetste een echt bord met daar wat info in. Maar na wat uitleg in de klasgroep zag ik dat ik dus niet goed bezig was. Ik heb dus mijn schetsen aangepast en er andere gemaakt. Simpel maar met een logische indeling. 
+            Veel detail zat er nog niet in maar dat moest ook nog niet in deze schetsen. Op de eerste 3 foto's kan je zien dat ik dus eerst echte borden had getekend omdat ik dacht dat dat de opdracht was. Op de andere 3 foto's kan je zien dat ik echt wireframes heb gemaakt. Ze waren nog niet helemaal wat ze moesten zijn maar ik dacht ik ga hiermee naar de les zodat ik hier al feedback op kan krijgen. 
+            Zelf vond ik dit wel moeilijk om te maken omdat ik nog geen voorkennis had waardoor ik niet zo goed wist wat low-fi schetsen en wireframes waren. Maar door uitleg te vragen aan mijn medestudenten heb ik mijn schetsen kunnen aanpassen. Ik heb mijn best gedaan om echt er goed over na te denken maar ik dacht ik ga het even zo laten zodat ik het nog na de les kan verbeteren.  
+        </p> 
+        <p>Het was een uitdagende maar leerzame start!</p>
+    </section>
+
+    <section>
+        <h2>Foto's</h2>
+
+        <div class="photo-grid">
+            <img src="images/Passagiersinformatie.jpg" class="clickable-img" alt="Passagiersinformatie">
+            <img src="images/Peronscherm.jpg" class="clickable-img" alt="Peronscherm">
+            <img src="images/vertrekbord.jpg" class="clickable-img" alt="Vertrekbord">
+            <img src="images/passagiersinfoj.jpg" class="clickable-img" alt="Passagiersinformatie">
+            <img src="images/peronschermj.jpg" class="clickable-img" alt="Peronscherm">
+            <img src="images/Vertrekbordj.jpg" class="clickable-img" alt="Vertrekbord">
+        </div>
+    </section>
+
+</main>
+
+<!-- MODAL (MOET BINNEN BODY) -->
+<div id="img-modal">
+    <span id="close">&times;</span>
+    <img id="modal-img">
+</div>
+
+<!-- SCRIPT (MOET ONDERAAN) -->
+<script>
+  const images = document.querySelectorAll(".clickable-img");
+  const modal = document.getElementById("img-modal");
+  const modalImg = document.getElementById("modal-img");
+  const close = document.getElementById("close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  close.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  modal.onclick = () => {
+    modal.style.display = "none";
+  };
+</script>
+<footer class="site-footer">
+  <p>Aagje Cornelissens — 1GDM2</p>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 8 – Introductie Webdesign</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+
+<main class="week-container">
+  <a href="../index.html" class="back-btn">← Terug</a>
+
+  <!-- Week label -->
+  <div class="week-header">
+      <span class="week-badge">Week 8</span>
+  </div>
+
+    <h1>gsm-schermen </h1>
+
+    <p class="intro">Figma</p>
+
+    <section class="card">
+        <h2>Documentatie</h2>
+        <p>In week 8 moesten we beginnen aan onze gsm-schermen. Hierbij moesten we onze 3 treinschermen die we hebben gemaakt omzetten naar gsm-schermen. We moesten hierbij ook al nadenken hoe ze interactief zouden kunnen werken. 
+            Bijvoorbeeld als je op een bestemming klikt dat je dan bij de wagonindeling komt. Dit vond ik best wel interessant om te maken omdat je zo al een beetje kon zien hoe een echte website eruit zou zien. 
+            Hoe ik te werk ben gegaan? Als eerste heb ik natuurlijk alle kleuren die ik in mijn 3 schermen heb gebruikt overgenomen naar mijn gsm-shcermen. Als eerste maakte ik gewoon de 3 schermen in gsm vorm. Dus nog geen extra scchermen. Zodat ik met deze schermen naar de les kon gaan en hierbij al feedback kon vragen. 
+            Ik had al wel meerdere bestemmingen bedacht. Want in mijn 3 treinborden had ik er maar een paar. Ik had ook al nagedacht over de tijd en bijvoorbeeld je batterij percentage dat bovenaan je gsm moet komen te staan. Dus daar had ik geen informatie gezet maar gewoon wit gelaten zodat ik daar die informatie in kon zetten. 
+              </p>
+    </section>
+
+    <section>
+        <h2>Foto's</h2>
+
+        <div class="photo-grid">
+            <img src="images/gsm-schermen.png" class="clickable-img" alt="Gsm-schermen">
+        </div>
+    </section>
+
+</main>
+
+<!-- MODAL (MOET BINNEN BODY) -->
+<div id="img-modal">
+    <span id="close">&times;</span>
+    <img id="modal-img">
+</div>
+
+<!-- SCRIPT (MOET ONDERAAN) -->
+<script>
+  const images = document.querySelectorAll(".clickable-img");
+  const modal = document.getElementById("img-modal");
+  const modalImg = document.getElementById("modal-img");
+  const close = document.getElementById("close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  close.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  modal.onclick = () => {
+    modal.style.display = "none";
+  };
+</script>
+<footer class="site-footer">
+  <p>Aagje Cornelissens — 1GDM2</p>
+</footer>
+</body>
+</html>

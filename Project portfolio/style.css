@@ -1,0 +1,287 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basis */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: radial-gradient(circle at top, #eef2ff, #ffffff 60%);
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+/* Label */
+.label {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #4338ca;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+/* Titel */
+h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #1e293b, #4f46e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+/* Subtitel */
+.subtitle {
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin-bottom: 4rem;
+}
+
+/* Weeks grid */
+.weeks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Week cards */
+.week-card {
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(135deg, #6366f1, #7c3aed);
+    border-radius: 24px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.week-card span {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 0.2rem;
+}
+
+/* Hover effect */
+.week-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.25);
+}
+/* Terug-link */
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: #4f46e5;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Content box */
+.content-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.content-box h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #4338ca;
+}
+
+.content-box ul {
+    padding-left: 1.2rem;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("images/background.jpg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.week-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: white;
+}
+
+.week-header {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.week-badge {
+    background: #eef2ff;
+    color: #4338ca;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.status.completed {
+    background: #dcfce7;
+    color: #166534;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.intro {
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    background: #f1f5f9;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+
+.card {
+    background: #f8fafc;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+}
+
+.card ul {
+    padding-left: 20px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.photo-grid img {
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+}
+/* HERO AFBEELDING */
+.hero {
+    height: 320px;
+    background-image: url("images/background.jpg.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Terug knop */
+.back-btn {
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    background: white;
+    padding: 8px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 500;
+}
+
+/* Content over de afbeelding laten vallen */
+.week-container {
+  max-width: 900px;
+  margin: 120px auto 60px; /* meer ruimte van boven zodat het niet tegen de rand zit */
+  padding: 40px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  position: relative; /* voor het terug-pijltje */
+}
+
+#modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001; /* boven de afbeelding */
+}
+/* Modal achtergrond */
+#img-modal {
+  display: none;          /* standaard verborgen */
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(0,0,0,0.8);
+}
+
+
+/* Grote afbeelding */
+#modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* Sluitknop */
+#close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001; /* boven de afbeelding */
+}
+.site-footer {
+  text-align: center;
+  margin: 40px auto 20px;
+  font-size: 14px;
+  color: #ffff24;
+}
+

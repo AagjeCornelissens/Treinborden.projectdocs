@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 – Introductie Webdesign</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+
+<main class="week-container">
+  <a href="../index.html" class="back-btn">← Terug</a>
+
+  <!-- Week label -->
+  <div class="week-header">
+      <span class="week-badge">Week 2</span>
+  </div>
+
+    <h1>Schetsen verbeteren</h1>
+
+    <p class="intro">Low-fi</p>
+
+    <section class="card">
+        <h2>Documentatie</h2>
+        <p>In de les van week 2 kregen we feedback over onze eerste schetsen. Ze lieten in de les ook voorbeelden zien zodat wij een beter idee kregen van hun verwachtingen en wat er wel of niet in moet staan. De feedback die ze aan mij hadden gegeven was dat ik meer dan 1 idee moest uitwerken per bord.
+            Dat snapte ik wel want ik had per bord 1 schets gemaakt. Ik had dit gedaan omdat ik nog niet zeker wist of ik juist bezig was en wou daarom even zeker weten voor ik meerdere schetsen ging maken. Door de feedback en de voorbeelden van andere leerlingen te zien zag ik wat de bedoeling was en begon ik hier verder op in te gaan.
+           Ik maakte nu 2 schetsen per bord omdat ik het toch nog wel moeilijk vond om meerdere andere ideeën te bedenken wanneer ik al 1 concreet idee had. Hier dacht ik echt al verder na hoe een echt bord er uit zou kunnen zien met welke kleuren en waar alles zou komen te staan. Ik dacht aan animaties voor de vertaling makkelijker te maken zodat het beter leesbaar was.  </p>
+        <p>De feedback van deze week heeft mij erg geholpen. </p>
+    </section>
+
+    <section>
+        <h2>Foto's</h2>
+
+        <div class="photo-grid">
+            <img src="images/Vertrekbord.jpg" class="clickable-img" alt="Vertrekbord">
+            <img src="images/peronscherm.jpg" class="clickable-img" alt="Peronscherm">
+            <img src="images/passagiersinfo.jpg" class="clickable-img" alt="Passagiersinformatie">
+        </div>
+    </section>
+
+</main>
+
+<!-- MODAL (MOET BINNEN BODY) -->
+<div id="img-modal">
+    <span id="close">&times;</span>
+    <img id="modal-img">
+</div>
+
+<!-- SCRIPT (MOET ONDERAAN) -->
+<script>
+  const images = document.querySelectorAll(".clickable-img");
+  const modal = document.getElementById("img-modal");
+  const modalImg = document.getElementById("modal-img");
+  const close = document.getElementById("close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  close.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  modal.onclick = () => {
+    modal.style.display = "none";
+  };
+</script>
+<footer class="site-footer">
+  <p>Aagje Cornelissens — 1GDM2</p>
+</footer>
+</body>
+</html>
